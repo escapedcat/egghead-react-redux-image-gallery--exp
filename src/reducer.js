@@ -12,6 +12,7 @@ const defaultState = {
 export default function images(state = defaultState, action) {
   switch(action.type) {
     case 'IMAGE_SELECTED':
+console.info('IMAGE_SELECTED');
       return {...state, selectedImage: action.image};
 
     default:
