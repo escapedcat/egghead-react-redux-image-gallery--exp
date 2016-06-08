@@ -31,4 +31,20 @@ So now it's:
 https://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=${API_KEY}&format=json&nojsoncallback=1&per_page=5
 ```
 
+### Default application state - reducer.js
+There's more added to the file than what's marked.
 
+
+### Default application state - Gallery.js
+```
+function mapStateToProps(state) {
+  return {
+    images: state.images
+    selectedImage: state.selectedImage
+  }
+}
+```
+A missing `,` after `images: state.images` breaks stuff for me.
+
+
+### 
