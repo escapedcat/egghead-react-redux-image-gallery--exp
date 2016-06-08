@@ -6,6 +6,10 @@ import {bindActionCreators} from 'redux';
 import  * as GalleryActions from './actions.js';
 
 export class Gallery extends Component {
+  componentDidMount() {
+    this.props.loadImages();
+  }
+
   render() {
     const {images, selectedImage, selectImage} = this.props;
 

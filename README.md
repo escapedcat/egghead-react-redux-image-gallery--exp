@@ -47,4 +47,24 @@ function mapStateToProps(state) {
 A missing `,` after `images: state.images` breaks stuff for me.
 
 
-### 
+### The first saga
+```
+build.js:2 Cannot find module './sagas' from '/home/hannes/data/www/egghead-react-redux-image-gallery--exp/src'
+```
+We're importing `sagas` but the file is called `saga`.
+
+#### Solution
+Rename the file to `sagas.js` and try again.
+
+
+### Triggering saga workflows with actions
+Typo in `main.js`. Should be:  
+```js
+...
+
+-import {loadImages} from './sagas';
++import {watchForLoadImages} from './sagas';
+
+...
+```
+
